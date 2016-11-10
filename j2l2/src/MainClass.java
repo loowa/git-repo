@@ -15,14 +15,13 @@ public class MainClass {
     }
     public static String[][] doMatrix(String str) throws ArrayIndexOutOfBoundsException {
         String[][] matrix = new String[4][4];
-        String[] arrStr1 = str.split("n");
+        String[] arrStr1 = str.split("\n");
         try {
             for (int i = 0; i < matrix.length; i++) {
                 String[] arrStr2 = arrStr1[i].split(" ");
                 for (int j = 0; j < matrix[i].length; j++) {
                     matrix[i][j] = arrStr2[j];
                 }
-
             }
         }catch (ArrayIndexOutOfBoundsException e) {
             throw new ArrayIndexOutOfBoundsException("Из данной строки не удасться создать матрицу 4x4");
