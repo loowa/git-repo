@@ -3,13 +3,26 @@ public class PhoneRecord {
     protected String surname;
     protected String email;
     protected String phone;
-    protected int id;
-    protected static int count;
+
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
     public PhoneRecord(String surname, String email, String phone) {
         this.surname = surname;
         this.email = email;
         this.phone = phone;
-        count++;
-        this.id = count;
+    }
+    public void printRecord(int id){
+        System.out.println("[" + id + "]     " + surname + " " + phone + " " + email);
     }
 }
